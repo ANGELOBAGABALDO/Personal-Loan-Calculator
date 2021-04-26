@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Personal Loan Calculator</h1>
+  <p>
+    This Personal Loan Calculator will give you a broad estimate on what your monthly payment will be and what the matured loan payment will be after it.
+  </p>
+  <p>
+    Source: https://www.ecomparemo.com/loans/personal-loan-calculator
+  </p>
+  <br />
+<ion-item>
+  <ion-label>Loan Amount:</ion-label>
+  <ion-input type="number" [(ngModel)]="amount"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Loan Term:</ion-label>
+  <ion-input type="number" [(ngModel)]="term"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Interest Rate [per month]:</ion-label>
+  <ion-input type="number" [(ngModel)]="rate"></ion-input>
+</ion-item>
+
+<button ion-button color="secondary" (click)="calculateAmount()">CALCULATE</button>
+<ion-item>
+  <h2>Total Interest Payable: {{IP}} </h2>
+</ion-item>
+
+<button ion-button color="secondary" (click)="calculatePayable()">CALCULATE</button>
+<ion-item>
+  <h3>Total Amount Payable: {{AP}} </h3>
+</ion-item>
+
+<button ion-button color="secondary" (click)="calculateMonth()">CALCULATE</button>
+<ion-item>
+  <h4>Monthly Payment: {{MP}} </h4>
+</ion-item>
